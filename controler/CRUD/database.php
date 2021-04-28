@@ -1,10 +1,10 @@
 <?php
-class database{
+class models{
 
     private $db_host = "localhost";
     private $db_user = "coeus";
     private $db_pass = "Arslan@coeus123";
-    private $db_name = "cms_system";
+    private $db_name = "EMS_System";
     
     private $mysqli = "";
     private $result = array();
@@ -87,7 +87,28 @@ class database{
         }
         
     }
-    
+    // login
+    public function authenticate_login($table,$credentials){
+        echo $credentials['email'];
+
+        // $sql = "SELECT * FROM $table WHERE  ";
+        // $tableInDb = $this->mysqli->query($sql);
+        
+        // if ($tableInDb){
+        //     if($tableInDb->num_rows >0){
+        //         foreach($tableInDb as $x){
+        //             echo $x['name'];
+        //         }
+        //         echo "<br>";
+        //     }
+
+        // }else{
+
+        //     echo "table  does not exits <br>";
+        //     return false;
+        // }
+        
+    }
     // close connection
     public function __destruct(){
         if ($this->conn){

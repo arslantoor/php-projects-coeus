@@ -22,18 +22,18 @@
                                     <p class="text-muted mb-4">Enter your email address and password to access admin panel.</p>
                                 </div>
 
-                                <form action="#">
+                                <form action="controler/login.php" method="POST">
 
                                     <div class="mb-3">
                                         <label for="emailaddress" class="form-label">Email address</label>
-                                        <input class="form-control" type="email" id="emailaddress" required="" placeholder="Enter your email">
+                                        <input class="form-control" type="email" name="email" id="emailaddress" required="" placeholder="Enter your email">
                                     </div>
 
                                     <div class="mb-3">
                                         <a href="pages-recoverpw.html" class="text-muted float-end"><small>Forgot your password?</small></a>
                                         <label for="password" class="form-label">Password</label>
                                         <div class="input-group input-group-merge">
-                                            <input type="password" id="password" class="form-control" placeholder="Enter your password">
+                                            <input type="password" id="password" name="passoword" class="form-control" placeholder="Enter your password">
                                             <div class="input-group-text" data-password="false">
                                                 <span class="password-eye"></span>
                                             </div>
