@@ -13,6 +13,7 @@ class models{
     // create database connection
     
     public function __construct(){
+   
         if (!$this->conn){
             $this->mysqli = new mysqli($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
             $this->conn=true;
@@ -20,7 +21,7 @@ class models{
                 array_push($this->result,$this->conn->connect_error);
                 return false;
             }else{
-                echo "success <br>";
+                
                 return true;
             }
 
@@ -87,28 +88,29 @@ class models{
         }
         
     }
-    // login
+
+    // Authenticate login
     public function authenticate_login($table,$credentials){
-        echo $credentials['email'];
 
-        // $sql = "SELECT * FROM $table WHERE  ";
-        // $tableInDb = $this->mysqli->query($sql);
+        $sql = "SELECT * FROM $table";
+        $tableInDb = $this->mysqli->query($sql);
         
-        // if ($tableInDb){
-        //     if($tableInDb->num_rows >0){
-        //         foreach($tableInDb as $x){
-        //             echo $x['name'];
-        //         }
-        //         echo "<br>";
-        //     }
+        if ($tableInDb){
+            if($tableInDb->num_rows >0){
+                foreach($tableInDb as $x){
+                    echo $x['name'];
+                }
+                echo "<br>";
+            }
 
-        // }else{
+        }else{
 
-        //     echo "table  does not exits <br>";
-        //     return false;
-        // }
+            echo "table  does not exits <br>";
+            return false;
+        }
         
     }
+
     // close connection
     public function __destruct(){
         if ($this->conn){

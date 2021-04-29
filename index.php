@@ -19,7 +19,14 @@
                                 
                                 <div class="text-center w-75 m-auto">
                                     <h4 class="text-dark-50 text-center mt-0 fw-bold">Sign In</h4>
-                                    <p class="text-muted mb-4">Enter your email address and password to access admin panel.</p>
+                                    <?php 
+                                        if(isset($_GET['error'])){ ?>
+
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <strong> <?php echo $_GET['error'] ;?>
+                                       
+                                        </div>
+                                   <?php  } ?>
                                 </div>
 
                                 <form action="controler/login.php" method="POST">
