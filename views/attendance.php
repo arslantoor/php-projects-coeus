@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'layout/head.php' ?>
+<?php include '../layout/head.php' ?>
 
 <body class="loading"
     data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
     <!-- Begin page -->
     <div class="wrapper">
         <!-- ========== Left Sidebar Start ========== -->
-        <?php include 'layout/sidenave.php' ?>
+        <?php include '../layout/sidenave.php' ?>
         <!-- Left Sidebar End -->
 
         <!-- ============================================================== -->
@@ -17,7 +17,7 @@
         <div class="content-page">
             <div class="content">
                 <!-- Topbar Start -->
-                <?php include 'layout/custom_navebar.php' ?>
+                <?php include '../layout/custom_navebar.php' ?>
                 <!-- end Topbar -->
 
                 <!-- Start Content-->
@@ -245,15 +245,15 @@
 
 
     <!-- bundle -->
-    <script src="assets/js/vendor.min.js"></script>
-    <script src="assets/js/app.min.js"></script>
+    <script src="../assets/js/vendor.min.js"></script>
+    <script src="../assets/js/app.min.js"></script>
 
     <!-- third party js -->
-    <script src="assets/js/vendor/fullcalendar.min.js"></script>
+    <script src="../assets/js/vendor/fullcalendar.min.js"></script>
     <!-- third party js ends -->
 
     <!-- demo app -->
-    <script src="assets/js/pages/demo.calendar.js"></script>
+    <script src="../assets/js/pages/demo.calendar.js"></script>
     <!-- end demo js-->
 
 </body>

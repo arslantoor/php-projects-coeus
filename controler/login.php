@@ -20,12 +20,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else if(empty($passoword)){
       header("Location:../index.php?error=password is required");
     }else{
+      
       $credentials = array("email"=>$email, "password"=>$passoword);
       $db_obj->authenticate_login("users",$credentials); 
     }
    
   } 
   else{
-            echo "working";
-        }
+    echo "working";
+  }
 ?>

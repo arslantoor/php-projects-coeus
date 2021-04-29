@@ -91,21 +91,24 @@ class models{
 
     // Authenticate login
     public function authenticate_login($table,$credentials){
-
-        $sql = "SELECT * FROM $table";
-        $tableInDb = $this->mysqli->query($sql);
         
+        $email=$credentials['email'];
+        $password=$credentials['password'];
+
+        $sql = "SELECT role,email,password FROM $table WHERE email='$email' AND password='$password'";
+        $tableInDb = $this->mysqli->query($sql);
+       echo "<pre>";
+        print_r($tableInDb->fetch_object());
+        echo "</pre>";
+        die();
+
         if ($tableInDb){
             if($tableInDb->num_rows >0){
-                foreach($tableInDb as $x){
-                    echo $x['name'];
-                }
-                echo "<br>";
+                header("Location: ../views/dashboard.php");
             }
 
         }else{
-
-            echo "table  does not exits <br>";
+            header("Location: ../index.php?error=user does not exist");
             return false;
         }
         

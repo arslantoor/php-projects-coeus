@@ -1,13 +1,13 @@
 <!DOCTYPE html>
     <html lang="en">
 
-    <?php include 'layout/head.php' ?>
+    <?php include '../layout/head.php' ?>
 
     <body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
         <!-- Begin page -->
         <div class="wrapper">
             <!-- ========== Left Sidebar Start ========== -->
-            <?php include 'layout/sidenave.php' ?>
+            <?php include '../layout/sidenave.php' ?>
             <!-- Left Sidebar End -->
 
             <!-- ============================================================== -->
@@ -17,7 +17,7 @@
             <div class="content-page">
                 <div class="content">
                     <!-- Topbar Start -->
-                    <?php include 'layout/custom_navebar.php' ?>
+                    <?php include '../layout/custom_navebar.php' ?>
                     <!-- end Topbar -->
                     
                     <!-- Start Content-->
@@ -135,7 +135,7 @@
                 <!-- content -->
 
                 <!-- Footer Start -->
-                <?php include 'layout/footer.php' ?>
+                <?php include '../layout/footer.php' ?>
                 <!-- end Footer -->
 
             </div>
@@ -242,17 +242,17 @@
         <!-- /End-bar -->
 
         <!-- bundle -->
-        <script src="assets/js/vendor.min.js"></script>
-        <script src="assets/js/app.min.js"></script>
+        <script src="../assets/js/vendor.min.js"></script>
+        <script src="../assets/js/app.min.js"></script>
 
         <!-- third party js -->
-        <script src="assets/js/vendor/apexcharts.min.js"></script>
-        <script src="assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="../assets/js/vendor/apexcharts.min.js"></script>
+        <script src="../assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="../assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
         <!-- third party js ends -->
 
         <!-- demo app -->
-        <script src="assets/js/pages/demo.dashboard.js"></script>
+        <script src="../assets/js/pages/demo.dashboard.js"></script>
         <!-- end demo js-->
     </body>
 </html>
