@@ -95,16 +95,24 @@ class models{
         $email=$credentials['email'];
         $password=$credentials['password'];
 
-        $sql = "SELECT role,email,password FROM $table WHERE email='$email' AND password='$password'";
+        $sql = "SELECT * FROM $table WHERE email='$email'";
         $tableInDb = $this->mysqli->query($sql);
-       echo "<pre>";
-        print_r($tableInDb->fetch_object());
-        echo "</pre>";
-        die();
-
+        $user = $tableInDb->fetch_object();
+        session_start();
         if ($tableInDb){
-            if($tableInDb->num_rows >0){
-                header("Location: ../views/dashboard.php");
+            if($tableInDb->num_rows == 1){
+               if ($email ===  $user->email){
+                   if(password_verify($password, $user->password));
+                   $_SESSION['name']=$user->name;
+                   $_SESSION['id']=$user->id;
+                   $_SESSION['email']=$user->email;
+
+                //    print_r($_SESSION);
+                //    die();
+
+                   header("Location: ../views/dashboard.php");
+               }
+               else{echo "failed";}
             }
 
         }else{
@@ -114,6 +122,19 @@ class models{
         
     }
 
+    // logout 
+    function logout(){
+        try{
+            unset($_SESSION["name"]);
+            header("Location: ../index.php?error=Your are logout");
+        }
+        catch(Exception $e){
+            echo "error";
+            die();
+        }
+           
+        
+    }
     // close connection
     public function __destruct(){
         if ($this->conn){

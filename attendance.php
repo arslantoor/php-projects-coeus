@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'layout/head.php' ?>
@@ -7,7 +10,7 @@
     <!-- Begin page -->
     <div class="wrapper">
         <!-- ========== Left Sidebar Start ========== -->
-        <?php include 'layout/sidenave.php' ?>
+        <?php include '..layout/sidenave.php' ?>
         <!-- Left Sidebar End -->
 
         <!-- ============================================================== -->
@@ -17,7 +20,7 @@
         <div class="content-page">
             <div class="content">
                 <!-- Topbar Start -->
-                <?php include 'layout/custom_navebar.php' ?>
+                <?php include '..layout/custom_navebar.php' ?>
                 <!-- end Topbar -->
 
                 <!-- Start Content-->

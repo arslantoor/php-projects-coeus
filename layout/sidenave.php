@@ -34,19 +34,19 @@
                     <span> Dashboards </span>
                 </a>
             </li>
-            <li class="side-nav-item">
+            <li class="side-nav-item" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                 <a href="attendance.php" class="side-nav-link">
                     <i class="uil-calender"></i>
                     <span> attendance </span>
                 </a>
             </li>
-            <li class="side-nav-item">
+            <li class="side-nav-item" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                 <a href="attendance.php" class="side-nav-link">
                     <i class="uil-calender"></i>
                     <span> Employee </span>
                 </a>
             </li>
-            <li class="side-nav-item">
+            <li class="side-nav-item"  aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                 <a href="attendance.php" class="side-nav-link">
                     <i class="uil-calender"></i>
                     <span> Department </span>

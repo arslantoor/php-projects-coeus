@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    print_r(session_id());
+    
+?>
 <!DOCTYPE html>
     <html lang="en">
 
@@ -22,9 +27,6 @@
                     
                     <!-- Start Content-->
                     <div class="container-fluid">
-
-                        <!-- start page title -->
-                        <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box">
                                     <div class="page-title-right">
