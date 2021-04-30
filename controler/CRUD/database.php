@@ -135,6 +135,25 @@ class models{
            
         
     }
+
+    // marke attendance 
+    function mark_attendance($attendance){
+
+        $check_in_time= $attendance['checkin'];
+        $check_out_time = $attendance['checkout'];
+        $user_id = $attendance['user'];
+
+        $sql = "INSERT INTO attendance(user_id,checkin,checkout) VALUES('$user_id','$check_in_time',' $check_out_time')";
+        $tableInDb = $this->mysqli->query($sql);
+
+
+
+        return true;
+
+    }
+
+
+
     // close connection
     public function __destruct(){
         if ($this->conn){
