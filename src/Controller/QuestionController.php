@@ -4,14 +4,15 @@
 namespace App\Controller;
 
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class QuestionController
+class QuestionController extends AbstractController
 {
     public function homepage()
     {
-        return new Response("Our first page to understand route / controller and Response ");
+        return $this->render('/question/index.html.twig');
     }
     /**
     * @Route("/questions/how-totie-my-shoes-with-magic")
