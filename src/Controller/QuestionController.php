@@ -12,7 +12,9 @@ class QuestionController extends AbstractController
 {
     public function homepage()
     {
-        return $this->render('/question/index.html.twig');
+
+        $fruits = ['apple','banana', 'mellon'];
+        return $this->render('/question/index.html.twig',['fruits'=>$fruits]);
     }
     /**
     * @Route("/questions/how-totie-my-shoes-with-magic")

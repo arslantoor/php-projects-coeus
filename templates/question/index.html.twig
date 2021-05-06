@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+{% block head %}
 <head>
     <meta charset="UTF-8">
     <title>symfony twig</title>
+    <link rel="stylesheet" href="{{ assets('css/bootstrap.min.css') }}">
 </head>
+{% endblock %}
 <body>
-
+<div class="container box p-3 shadow my-5">
 <div>
-    <h1>we will test symfony twig tools to test our recipe </h1>
+    <h1 class="text-yellow">Symfony Training</h1>
+</div>
+
+    <h3>Frutes ({{ fruits|length }})</h3>
+    <ul>
+        {% for fruit in fruits %}
+        <li>{{  fruit  }}</li>
+        {% endfor %}
+    </ul>
+
 </div>
 </body>
 </html>
